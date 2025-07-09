@@ -7,7 +7,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://arniroula.github.io',
+    site: "https://arniroula.github.io",
+    base: "/",
     integrations: [mdx(), sitemap()],
     vite: {
         plugins: [tailwindcss()],
