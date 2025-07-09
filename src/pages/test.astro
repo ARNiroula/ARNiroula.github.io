@@ -1,0 +1,27 @@
+---
+import FancyTable from "../components/FancyTable.astro"
+import FancyEduTable from "../components/FancyEduTable.astro"
+
+const job = {
+"title": "AI Engineer",
+"description": "AI Stuff",
+"company": "Medlaunch Concepts",
+"url": "https://medlaunchlp.com/",
+"startDate": "2025",
+"endDate": "Present",
+"techs": ["FastAPI", "AWS", "S3"]
+}
+
+const edu = {
+"title": "Computer Engineering",
+"degree": "M.S. Engineering",
+"startDate": "2025",
+"endDate": "Present",
+"university": "New York University",
+"gpa": "4.0",
+"url": "https://www.nyu.edu/",
+}
+---
+
+<!-- <FancyTable job={job} /> -->
+<FancyEduTable edu={edu} />
