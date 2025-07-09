@@ -9,6 +9,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
     site: "https://arniroula.github.io",
     base: "/",
+    output: "static",
     integrations: [mdx(), sitemap()],
     vite: {
         plugins: [tailwindcss()],
