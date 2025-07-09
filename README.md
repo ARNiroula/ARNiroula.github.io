@@ -1,3 +1,5 @@
+# Based on Astro Starter Kit
+
 # Astro Starter Kit: Blog
 
 ```sh
