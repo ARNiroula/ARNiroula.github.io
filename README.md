@@ -1,4 +1,4 @@
-# Based on Astro Starter Kit
+# Based on Astro Starter Blog Template
 
 # Astro Starter Kit: Blog
 
