@@ -76,6 +76,8 @@ const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.prop
                 box-shadow: 1px 2px 4px hsl(220deg 60% 50%);
                 text-decoration: underline;
             }
+
+
 		</style>
 	</head>
 
@@ -106,7 +108,9 @@ const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.prop
                             </div>
 						<hr />
 					</div>
-					<slot />
+                    <div class="blog">
+                        <slot />
+                    </div>
 				</div>
 			</article>
 		</main>

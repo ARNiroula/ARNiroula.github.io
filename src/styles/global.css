@@ -112,7 +112,7 @@ p {
 }
 
 .prose p {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 textarea {
@@ -187,4 +187,10 @@ hr {
     clip-path: inset(50%);
     /* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
     white-space: nowrap;
+}
+
+
+.blog>ul {
+    list-style: disc;
+    margin-bottom: 1.5em;
 }
