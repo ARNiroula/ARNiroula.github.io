@@ -7,7 +7,7 @@ setup: |
     import { Picture } from "astro-imagetools/components";
 ---
 
-### Deploying to GitHub Pages
+## Deploying to GitHub Pages
 After I was somewhat satisfied with the website, the first order of business was to deploy it. I opted to use deploy it to GitHub Pages since:
 - All the contents here are static
 - It's free
@@ -17,7 +17,7 @@ The nice thing is that the Astro Team has published all the necessary actions to
 
 When the workflows was ready, it was just a matter of pushing the changes to the main branch and viola, the blog was up and running.
 
-### Ironing out the kinks
+## Ironing out the kinks
 The website was up and running, I though my work was done for the day. But, I saw failure in the deployment status.
 ![Github Actions Error](../../assets/post-1/action_error.PNG)
 
@@ -31,7 +31,7 @@ Looking around a bit I found that in `Build and Deployment` source was configure
 
 It was set to `Deploy from a branch` on default, which was causing the extra action of trying to build Jekyll page. So, I just fixed it and that was the end of that.
 
-### A bit of a tour of the `deployment.yml`
+## A bit of a tour of the `deployment.yml`
 I wanted to see what was the inner logic of the `action.yml` script. Looking through the [yml file](https://github.com/withastro/action/blob/main/action.yml), it seemed pretty straightforward. The steps were basically:
 - Find the package-manager by checking the what kind of lock file was present
 - Setup the appropriate package manager in the environment
@@ -39,6 +39,6 @@ I wanted to see what was the inner logic of the `action.yml` script. Looking thr
 - Build the static site using `$PACKAGE_MANAGER run build` command
 - Upload the pages the pages artifact using `actions/upload-pages-artifact@v3` actions
 
-### In conclusion
+## In conclusion
 All in all, this was a relatively straightforward process. Which seemed like a good starting point for a blog.
 Yup, that's it I guess. Have a good one. Get out of here now.
