@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import sectionize from "@hbsnow/rehype-sectionize";
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -14,4 +15,8 @@ export default defineConfig({
     vite: {
         plugins: [tailwindcss()],
     },
+    markdown: {
+        // @ts-ignore
+        rehypePlugins: [sectionize],
+    }
 });
