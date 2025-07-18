@@ -17,5 +17,8 @@
     "astro": "^5.11.0",
     "sharp": "^0.34.2",
     "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "@hbsnow/rehype-sectionize": "^1.0.7"
   }
 }
