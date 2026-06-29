@@ -9,13 +9,10 @@ const { job } = Astro.props;
     >
         <div class="absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-blue-950/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg">
         </div>
-        <header class="z-10 mb-2 mt-1 text-xs font-bold uppercase tracking-wide text-slate-700 sm:col-span-2" aria-label={`${job.startDate} to ${job.endDate}`}>
-            {job.startDate} - {job.endDate}
-        </header>
-        <div class="z-10 sm:col-span-6">
+        <div class="z-10 sm:col-span-5">
             <h3 class="font-medium leading-snug text-slate-200">
                 <div>
-                    <a class="relative inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base" href=`${job.url}` target="_blank" rel="noreferrer noopener" aria-label={`${job.title} at {job.company} (opens in a new tab)`}>
+                    <a class="inline-flex items-baseline font-semibold leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300 group/link text-base" href=`${job.url}` target="_blank" rel="noreferrer noopener" aria-label={`${job.title} at {job.company} (opens in a new tab)`}>
                         <span class="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block">
                         </span>
                         <span>{job.title}, <span class="inline-block">{job.company}
@@ -26,7 +23,7 @@ const { job } = Astro.props;
                     </a>
                 </div>
             </h3>
-            <p class="mt-2 text-sm leading-normal">
+            <p class="mt-2 text-base leading-normal">
             {job.description}
             </p>
             <ul class="mt-2 flex flex-wrap" aria-label="Technologies used">
@@ -39,5 +36,8 @@ const { job } = Astro.props;
                 ))}
             </ul>
         </div>
+        <header class="z-10 mb-2 mt-1 text-xs font-bold uppercase tracking-wide text-slate-700 sm:col-span-3 sm:text-right whitespace-nowrap" aria-label={`${job.startDate} to ${job.endDate}`}>
+            {job.startDate} - {job.endDate}
+        </header>
     </li>
 </ul>
